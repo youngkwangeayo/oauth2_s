@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+    <th:block class="headerf" th:fragment="header">
+
+        <header class="header">
+            <h1 th:text="${name}">네임</h1>
+
+            <div class="header-btn">
+                <a th:if="${name}" href="/logout">로그아웃</a>
+                <a th:unless="${name}" href="/login">로그인</a>
+            </div>
+            
+        </header>
+
+
+    <th:block>    
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+            
+        let message = /*[[${name}]]*/
+        console.log(message);
+
+            
+      
+        /*]]>*/
+    </script>
+    
+
+</html>

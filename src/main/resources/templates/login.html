@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+    <form action="/loginProc" method="post">
+        <span for="user-email">이메일</span>
+        <input id="user-email" type="text" name="user-email" placeholder="id" required="true">
+
+        <span>패스워드</span>
+        <input type="password" name="password" class="form-control" placeholder="password" required="true">
+        
+        <input class="form-control btn btn-secondary" type="submit" value="로그인">
+    </form>
+    <!-- <a href="/login/oauth2/google">구글로그인</a> -->
+    <!-- <a href="https://nid.naver.com/oauth2.0/authorize">네이버</a> -->
+    <a href="/oauth2/authorization/google">구글로그인</a>
+    <a href="/oauth2/authorization/naver">네이버</a>
+    <a href="/oauth2/authorization/kakao">카카오</a>
+    
+    
+
+    
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        
+        let message = /*[[${resultMessage}]]*/
+        console.log(message);
+        
+        if(message!=null){
+            alert(message);
+        }
+    
+        /*]]>*/
+    </script>
+
+</body>
+</html>
