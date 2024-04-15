@@ -26,6 +26,9 @@ public interface MemberMapper {
     @Select("SELECT * FROM `member` WHERE user_email = #{userEmail};")
     Member findMemberByEmail(String userEmail);
 
+    @ResultMap("member")
+    @Select("SELECT * FROM `member` WHERE user_email = #{userEmail} AND auth_social = #{soscial}")
+    Member findByUniqueMember(String userEmail,String soscial);
 
     @ResultMap("member")
     @Insert("INSERT INTO member (user_email,user_name,user_passward,auth_social) VALUES (#{email},#{name},#{passward},#{authSocial});")

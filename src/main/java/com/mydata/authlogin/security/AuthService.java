@@ -66,7 +66,8 @@ import com.mydata.authlogin.mapper.MemberMapper;
                 social = "kakao";
             }
     
-            member = memberMapper.findMemberByEmail(email);
+            // member = memberMapper.findMemberByEmail(email);
+            member = memberMapper.findByUniqueMember(email,social);
     
             if(member == null){
                 member = collectMember(social,atteributes);
