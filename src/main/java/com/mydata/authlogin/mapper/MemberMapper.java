@@ -1,6 +1,5 @@
 package com.mydata.authlogin.mapper;
 
-import java.util.Map;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
@@ -25,6 +24,7 @@ public interface MemberMapper {
     })
     @Select("SELECT * FROM `member` WHERE user_email = #{userEmail};")
     Member findMemberByEmail(String userEmail);
+
 
     @ResultMap("member")
     @Select("SELECT * FROM `member` WHERE user_email = #{userEmail} AND auth_social = #{soscial}")

@@ -13,7 +13,6 @@ import com.mydata.authlogin.security.AuthUser;
 
 
 
-
 @Controller
 public class MainController {
     
