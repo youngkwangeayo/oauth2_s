@@ -1,0 +1,62 @@
+.login-area{ 
+    margin: 0; /* body의 기본 마진 제거 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 가로 방향 가운데 정렬 */
+    align-items: center; /* 세로 방향 가운데 정렬 */
+    height: 50vh; /* 화면 전체 높이만큼 요소를 채움 */
+}
+
+.login-area .main-name{ 
+    text-decoration: none;
+    color: inherit;
+}
+
+.login-area .login-box{ 
+    border:solid #ccc; border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    
+}
+
+.login-area .login-box input{  
+    border: none;
+}
+.login-area .login-box .id-area{ 
+    border:solid #ccc; border-radius: 5px;
+}
+.login-area .login-box .password-area{ 
+    border:solid #ccc; border-radius: 5px;
+}
+
+
+.login-area .login-box .login-btn{ 
+    margin-top: 15px;
+    margin-bottom: 18px;
+    justify-content: center; /* 가로 방향 가운데 정렬 */
+    width: 100%;
+    border-radius: 5px;
+}
+
+.login-area .login-box .login-btn:hover{ 
+    background: #7a7777;
+    border-radius: 5px;
+}
+
+.login-area .login-box .social-area{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 좌우(가로) 방향 가운데 정렬 */
+    width: 100%;
+
+}
+
+.login-area .login-box .social-area img{ 
+    width: 250px;
+    height: 40px;
+
+}
+
+
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
+    <!-- <script src='main.js'></script> -->
+</head>
+<body>
+
+
+    <div class="login-area">
+
+        <h1><a href="/" class="main-name">오쓰 로그인</a></h1>
+
+        <div class="login-box">
+            <p>휴고짱짱</p>
+            <form action="/loginProc" method="post">
+                <div class="id-area">
+                    <span for="user-email">이메일</span>
+                    <input id="user-email" type="text" name="user-email" placeholder="id" required="true">
+                </div>
+                <div class="password-area">
+                    <span>패스워드</span>
+                    <input type="password" name="password" placeholder="password" required="true">
+                </div>
+                <input class="login-btn" type="submit" value="로그인">
+            </form>
+            <div class="social-area">
+                <a href="/oauth2/authorization/google"><img src="img/google-login-btn.png" alt="구글 로그인"></a>
+                <a href="/oauth2/authorization/naver"><img src="img/naver-login-btn.png" alt="네이버 로그인"></a>
+                <a href="/oauth2/authorization/kakao"><img src="img/kakao-login-btn.png" alt="카카오 로그인"></a>
+            </div>
+        </div>
+
+
+    </div>
+
+    
+    
+    
+
+    
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        
+        let message = /*[[${resultMessage}]]*/
+        console.log(message);
+        
+        if(message!=null){
+            alert(message);
+        }
+    
+        /*]]>*/
+    </script>
+
+</body>
+</html>

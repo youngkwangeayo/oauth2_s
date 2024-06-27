@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+    <th:block class="headerf" th:fragment="header">
+
+        <header class="header">
+            
+            <div class="header-btn navbar">
+                <h1> <a href="/" class="main-name">OAuth2-LOGIN</a></h1>
+                <div class="align-right">
+                    <h1 th:text="${name}">네임</h1>
+                    <a th:if="${name}" href="/logout">로그아웃</a>
+                    <a th:unless="${name}" href="/login">로그인</a>
+                </div>
+            </div>
+            
+        </header>
+
+
+    <th:block>    
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+            
+        let message = /*[[${name}]]*/
+        console.log(message);
+
+            
+      
+        /*]]>*/
+    </script>
+    
+
+</html>
